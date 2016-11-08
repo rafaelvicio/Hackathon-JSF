@@ -1,11 +1,13 @@
 package com.stefanini.bean;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import com.stefanini.model.Proprietario;
 import com.stefanini.model.Tipotelefone;
 import com.stefanini.service.TipotelefoneService;
 
@@ -16,6 +18,8 @@ public class TipotelefoneBean implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private Tipotelefone tipotelefone;
+	
+	private List<Tipotelefone> tipotelefones;
 	
 	public TipotelefoneBean(){
 		this.tipotelefone = new Tipotelefone();
@@ -48,5 +52,16 @@ public class TipotelefoneBean implements Serializable{
 	public void setTipotelefoneService(TipotelefoneService tipotelefoneService) {
 		this.tipotelefoneService = tipotelefoneService;
 	}
+
+
+	public List<Tipotelefone> getTipotelefones() {
+		return tipotelefoneService.listar(tipotelefone);
+	}
+
+
+	public void setTipotelefones(List<Tipotelefone> tipotelefones) {
+		this.tipotelefones = tipotelefones;
+	}
+	
 
 }

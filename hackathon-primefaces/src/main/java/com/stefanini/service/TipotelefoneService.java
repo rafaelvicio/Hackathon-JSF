@@ -1,5 +1,7 @@
 package com.stefanini.service;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -17,6 +19,11 @@ public class TipotelefoneService {
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public void incluir(Tipotelefone tipotelefone){
 		tipotelefoneRepository.incluir(tipotelefone);
+	}
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public List<Tipotelefone> listar(Tipotelefone tipotelefone){
+		return tipotelefoneRepository.listaTodos();
 	}
 
 }
