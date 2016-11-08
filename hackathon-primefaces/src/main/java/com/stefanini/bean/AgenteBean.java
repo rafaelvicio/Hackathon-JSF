@@ -14,6 +14,7 @@ import com.stefanini.service.AgenteService;
 public class AgenteBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
 	private Agente agente;
 
 	public AgenteBean() {
@@ -23,6 +24,13 @@ public class AgenteBean implements Serializable {
 	@Inject
 	private AgenteService agenteService;
 
+	public String incluir() {
+		agenteService.incluir(agente);
+		return "pages/teste.faces?faces-redirect=true";
+	}
+	
+	// Gets e Sets
+	
 	public Agente getAgente() {
 		return agente;
 	}
@@ -38,11 +46,5 @@ public class AgenteBean implements Serializable {
 	public void setAgenteService(AgenteService agenteService) {
 		this.agenteService = agenteService;
 	}
-
-	public String incluir() {
-		agenteService.incluir(agente);
-		return "pages/teste.faces?faces-redirect=true";
-	}
-	
 	
 }

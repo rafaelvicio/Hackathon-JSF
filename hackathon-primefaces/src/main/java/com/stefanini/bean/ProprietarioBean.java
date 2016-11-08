@@ -7,7 +7,6 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.stefanini.model.Agente;
 import com.stefanini.model.Proprietario;
 import com.stefanini.service.ProprietarioService;
 
@@ -37,7 +36,6 @@ public class ProprietarioBean implements Serializable{
 		this.proprietario = proprietarioService.buscar(proprietario.getCpfProprietario());
 		return "/pages/cadastroTelefones.xhtml";
 	}
-
 	
 	// Gets e Sets
 	
@@ -61,11 +59,5 @@ public class ProprietarioBean implements Serializable{
 	public List<Proprietario> getProprietarios() {
 		return proprietarioService.listar(proprietario);
 	}
-	
-	
-	
-	
-	
-	
 
 }
