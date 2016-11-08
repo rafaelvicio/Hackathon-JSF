@@ -12,9 +12,7 @@
          <label>Nome:</label>
          <p:inputText value="#{agenteBean.agente.nome}" />
          <label>Data Contratação:</label>
-         <p:calendar value="#{agenteBean.agente.dtContratacao}" ></p:calendar>
-         <label>Tempo de Serviço</label>
-         <p:inputText value="#{agenteBean.agente.tempoServico}" />
+         <p:calendar pattern="dd/dd/yyyy" value="#{agenteBean.agente.dtContratacao}" locale="pt_BR" ></p:calendar>
          
          <p:commandButton action="#{agenteBean.incluir()}" value="Incluir" ></p:commandButton>
          </h:panelGrid>

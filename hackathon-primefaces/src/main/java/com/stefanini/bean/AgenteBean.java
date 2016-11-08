@@ -40,6 +40,9 @@ public class AgenteBean implements Serializable {
 	}
 
 	public String incluir() {
-		return "pages/teste";
+		agenteService.incluir(agente);
+		return "pages/teste.faces?faces-redirect=true";
 	}
+	
+	
 }
