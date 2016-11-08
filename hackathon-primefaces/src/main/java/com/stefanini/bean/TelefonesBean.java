@@ -7,7 +7,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import com.stefanini.model.Telefones;
-import com.stefanini.model.TelefonesId;
 import com.stefanini.service.TelefoneService;
 
 @Named("telefonesMB")
@@ -17,8 +16,6 @@ public class TelefonesBean implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private Telefones telefones;
-	
-	private TelefonesId telefonesId;
 	
 	public TelefonesBean() {
 		this.telefones = new Telefones();
@@ -30,10 +27,7 @@ public class TelefonesBean implements Serializable{
 	public String incluir(){
 		telefoneService.incluir(telefones);
 		return "pages/sucessoTelefones.faces?faces-redirect=true";
-	}
-
-
-	
+	}	
 	
 	// Gets e Sets
 	
@@ -51,14 +45,6 @@ public class TelefonesBean implements Serializable{
 
 	public void setTelefoneService(TelefoneService telefoneService) {
 		this.telefoneService = telefoneService;
-	}
-
-	public TelefonesId getTelefonesId() {
-		return telefonesId;
-	}
-
-	public void setTelefonesId(TelefonesId telefonesId) {
-		this.telefonesId = telefonesId;
 	}
 
 }
