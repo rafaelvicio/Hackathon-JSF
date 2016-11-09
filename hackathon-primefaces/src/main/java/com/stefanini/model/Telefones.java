@@ -11,7 +11,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "telefones", catalog = "hackatonjsf")
 public class Telefones implements java.io.Serializable {
 
 	@Id

@@ -2,6 +2,8 @@ package com.stefanini.model;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -46,5 +48,6 @@ public class Modelo {
 	public void setDescricaoModelo(String descricaoModelo) {
 		this.descricaoModelo = descricaoModelo;
 	}
+
 
 }

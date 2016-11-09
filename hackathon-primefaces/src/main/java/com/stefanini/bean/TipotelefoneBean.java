@@ -7,7 +7,6 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.stefanini.model.Proprietario;
 import com.stefanini.model.Tipotelefone;
 import com.stefanini.service.TipotelefoneService;
 

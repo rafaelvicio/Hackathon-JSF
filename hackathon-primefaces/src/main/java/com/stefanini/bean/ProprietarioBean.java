@@ -55,9 +55,13 @@ public class ProprietarioBean implements Serializable{
 		this.proprietarioService = proprietarioService;
 	}
 
-
 	public List<Proprietario> getProprietarios() {
 		return proprietarioService.listar(proprietario);
 	}
+
+	public void setProprietarios(List<Proprietario> proprietarios) {
+		this.proprietarios = proprietarios;
+	}
+
 
 }
