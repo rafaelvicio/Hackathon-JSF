@@ -1,9 +1,11 @@
 package com.stefanini.bean;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
 
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -37,6 +39,12 @@ public class InfracaoBean implements Serializable{
 	public void excluir(Integer idInfracao) {
 		infracoesService.excluir(idInfracao);
 	}
+	
+	 public String chamar(){
+		 return "/pages/Infracao.xhtml";
+	 }
+	
+	// Gets e Sets
 
 	public Infracoes getInfracoe() {
 		return infracoe;
