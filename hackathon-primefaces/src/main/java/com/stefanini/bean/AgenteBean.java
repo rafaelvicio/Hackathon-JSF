@@ -33,8 +33,8 @@ public class AgenteBean implements Serializable {
 		return "pages/teste.faces?faces-redirect=true";
 	}
 	
-	public void excluir(Agente agente) {
-		agenteService.excluir(agente);
+	public void excluir(Integer idAgente) {
+		agenteService.excluir(idAgente);
 	}
 	
 	// Gets e Sets
