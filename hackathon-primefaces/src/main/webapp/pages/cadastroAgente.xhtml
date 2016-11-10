@@ -9,10 +9,14 @@
 		<h:form>
 			<h:panelGrid columns="2">
 
-			 <label>Nome:</label>
-         <p:inputText value="#{agenteBean.agente.nome}" />
-         <label>Data Contratação:</label>
-         <p:calendar pattern="dd/dd/yyyy" value="#{agenteBean.agente.dtContratacao}" locale="pt_BR" ></p:calendar>
+		<label for="nome" >Nome:</label>
+         <p:inputText id="nome" value="#{agenteBean.agente.nome}" />
+         
+         <label for="dataContratacao" >Data Contratação:</label>
+         <p:calendar id="dataContratacao" pattern="dd/dd/yyyy" value="#{agenteBean.agente.dtContratacao}" locale="pt_BR" ></p:calendar>
+         
+         <label for="tempoServico">Tempo de Serviço:</label>
+         <p:inputText id="tempoServiceo" value="#{agenteBean.agente.tempoServico}" />
          
          <p:commandButton action="#{agenteBean.incluir()}" value="Incluir" ></p:commandButton>
 

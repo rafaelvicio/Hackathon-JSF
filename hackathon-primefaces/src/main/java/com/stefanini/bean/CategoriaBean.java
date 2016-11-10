@@ -1,5 +1,6 @@
 package com.stefanini.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.enterprise.context.SessionScoped;
@@ -11,7 +12,9 @@ import com.stefanini.service.CategoriaService;
 
 @Named("categoriaMB")
 @SessionScoped
-public class CategoriaBean {
+public class CategoriaBean implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 
 	Categoria categoria;
 
