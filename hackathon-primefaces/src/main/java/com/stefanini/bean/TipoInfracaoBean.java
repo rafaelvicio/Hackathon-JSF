@@ -1,6 +1,7 @@
 package com.stefanini.bean;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
@@ -17,6 +18,8 @@ public class TipoInfracaoBean implements Serializable{
 	
 	Tipoinfracao tipoinfracao;
 	
+	private List<Tipoinfracao> tipoinfracoes;
+	
 	public TipoInfracaoBean() {
 		this.tipoinfracao = new Tipoinfracao();
 	}
@@ -26,6 +29,7 @@ public class TipoInfracaoBean implements Serializable{
 	
 	public String incluir(){
 		tipoinfracaoService.incluir(tipoinfracao);
+		this.tipoinfracao = new Tipoinfracao();
 		return "pages/sucessoTipoInfracao.faces?faces-redirect=true";
 	}
 	
@@ -46,5 +50,15 @@ public class TipoInfracaoBean implements Serializable{
 	public void setTipoinfracaoService(TipoinfracaoService tipoinfracaoService) {
 		this.tipoinfracaoService = tipoinfracaoService;
 	}
+
+	public List<Tipoinfracao> getTipoinfracoes() {
+		return tipoinfracaoService.listar();
+	}
+
+	public void setTipoinfracoes(List<Tipoinfracao> tipoinfracoes) {
+		this.tipoinfracoes = tipoinfracoes;
+	}
+	
+	
 
 }

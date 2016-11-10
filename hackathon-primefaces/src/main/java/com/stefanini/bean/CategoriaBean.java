@@ -29,6 +29,7 @@ public class CategoriaBean implements Serializable{
 	
 	public String incluir(){
 		categoriaService.incluir(categoria);
+		this.categoria = new Categoria();
 		return "pages/sucessoCategoria.faces?faces-redirect=true";
 	}
 	

@@ -29,12 +29,17 @@ public class ProprietarioBean implements Serializable{
 	
 	public String incluir(){
 		proprietarioService.incluir(proprietario);
+		this.proprietario = new Proprietario();
 		return "pages/sucessoProprietario.faces?faces-redirect=true";
 	}
 	
 	public String carregar(Proprietario proprietario){
 		this.proprietario = proprietarioService.buscar(proprietario.getCpfProprietario());
 		return "/pages/cadastroTelefones.xhtml";
+	}
+	
+	public void excluir(Integer cpfProprietario) {
+		proprietarioService.excluir(cpfProprietario);
 	}
 	
 	// Gets e Sets

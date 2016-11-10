@@ -6,6 +6,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
+import com.stefanini.model.Agente;
 import com.stefanini.model.Proprietario;
 
 public class ProprietarioRepository {
@@ -26,5 +27,9 @@ public class ProprietarioRepository {
 		
 		 List<Proprietario> lista = query.getResultList();
 		return lista;
+	}
+	
+	public void excluir(Integer cpfProprietario) {
+		this.manager.remove(manager.find(Proprietario.class, cpfProprietario));
 	}
 }

@@ -16,7 +16,7 @@
 			<p:inputText id="numero" value="#{telefonesMB.telefones.numero}"></p:inputText>
 			
 			<label for="tipo">Tipo: </label>
-			<p:autoComplete id="tipo" value="#{telefonesMB.telefones.idTipoTelefone}" var="T" itemLabel="#{T.descricaoTipoTelefone}" completeMethod="#{tipotelefoneMB.tipotelefoneService.listar(tipotelefone)}" />
+			<p:autoComplete id="tipo" value="#{telefonesMB.telefones.idTipoTelefone}" var="T" itemLabel="#{T.descricaoTipoTelefone}"  completeMethod="#{tipotelefoneMB.tipotelefoneService.listar(tipotelefone)}" />
 			
 			<p:commandButton action="#{telefonesMB.incluir()}" value="Incluir" ></p:commandButton>
 			

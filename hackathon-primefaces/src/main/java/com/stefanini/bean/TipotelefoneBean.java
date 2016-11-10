@@ -29,6 +29,7 @@ public class TipotelefoneBean implements Serializable{
 	
 	public String incluir(){
 		tipotelefoneService.incluir(tipotelefone);
+		this.tipotelefone = new Tipotelefone();
 		return "pages/index";
 	}
 	

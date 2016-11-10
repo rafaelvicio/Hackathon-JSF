@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:decorate template="template.xhtml">
+	<ui:define name="centro">
+
+		<h:form>
+			<h:panelGrid columns="2">
+			
+			<label for="agente">Agente: </label>
+			<p:autoComplete id="agente" value="#{infracaoMB.infracoe.idAgente}" var="T" itemLabel="#{T.nome}"  completeMethod="#{agenteBean.agenteService.listar()}" />
+			
+			<label for="local">Local Infração: </label>
+			<p:autoComplete id="local" value="#{infracaoMB.infracoe.idLocalInfracao}" var="T" itemLabel="#{T.descricaoLocalInfracao}"  completeMethod="#{localInfracaooMB.localInfracaoService.listar()}" />
+			
+			<label for="tipo">Tipo Infração: </label>
+			<p:autoComplete id="tipo" value="#{infracaoMB.infracoe.idTipoInfracao}" var="T" itemLabel="#{T.descricaoTipoInfracao}"  completeMethod="#{tipoInfracaoMB.tipoinfracaoService.listar()}" />
+			
+<!-- 			<label for="placa">Placa: </label> -->
+<!-- 			<p:autoComplete id="placa" value="#{infracaoMB.infracoe.placa}" var="T" itemLabel="#{T.placa}"  completeMethod="#{tipotelefoneMB.tipotelefoneService.listar(tipotelefone)}" /> -->
+			
+			
+			<label for="velocidade">Velocidade: </label>
+			<p:inputText id="velocidade" value="#{infracaoMB.infracoe.velocidade}"></p:inputText>
+			
+			<p:commandButton action="#{infracaoMB.incluir()}" value="Incluir" ></p:commandButton>
+			
+			</h:panelGrid>
+		</h:form>
+
+	</ui:define>
+</ui:decorate>
+</html>

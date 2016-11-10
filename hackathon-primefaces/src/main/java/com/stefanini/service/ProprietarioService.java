@@ -30,5 +30,9 @@ public class ProprietarioService {
 	public List<Proprietario> listar(Proprietario proprietario){
 		return proprietarioRepository.listaTodos();
 	}
+	
+	public void excluir(Integer cpfProprietario){
+		proprietarioRepository.excluir(cpfProprietario);
+	}
 
 }

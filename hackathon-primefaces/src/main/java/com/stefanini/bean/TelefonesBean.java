@@ -26,6 +26,7 @@ public class TelefonesBean implements Serializable{
 	
 	public String incluir(){
 		telefoneService.incluir(telefones);
+		this.telefones = new Telefones();
 		return "pages/sucessoTelefones.faces?faces-redirect=true";
 	}	
 	

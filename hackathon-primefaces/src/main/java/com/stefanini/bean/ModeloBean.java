@@ -30,6 +30,7 @@ public class ModeloBean implements Serializable{
 	
 	public String incluir(){
 		modeloService.incluir(modelo);
+		this.modelo = new Modelo();
 		return "pages/sucessoModelo.faces?faces-redirect=true";
 	}
 	
